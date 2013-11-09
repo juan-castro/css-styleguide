@@ -1,0 +1,324 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Styleguide</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="fonts/style.css"/>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/waypoints.min.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="content">
+            <div id="intro">
+                <h1 class="title">CSS Styleguide</h1>
+                <p>This document is a guide to the mark-up styles used throughout the site. Feel free to add/remove elements that may be used on your site and that are not included on this Styleguide.</p>
+            </div>
+
+            <!--  Text styles -->
+            <div class="module">
+                <h1 class="title">Text Styles</h1>
+                <h1>h1 First-Level Header</h1>
+                <h2>h2 Second-Level Header</h2>
+                <h3>h3 Third-Level Header</h3>
+                <h4>h4 Fourth-Level Header</h4>
+                <h5>h5 Fifth-Level Header</h5>
+                <h6>h6 Sixth-Level Header</h6>
+
+                <p>This is a paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor pretium gravida. Cras accumsan fermentum scelerisque. Duis accumsan nisi a quam euismod lobortis. Proin nisl arcu, aliquam vitae scelerisque sit amet, laoreet quis nulla. Vivamus vel mi vel velit pharetra eleifend.</p>
+
+                <p>Morbi scelerisque semper purus, sit amet mollis ante congue id. Pellentesque porttitor nunc in sapien fermentum, quis viverra eros viverra. Nullam at enim cursus, dignissim nisi vel, accumsan nisi. Duis pellentesque dolor quis risus porttitor, ac elementum turpis pharetra. Quisque tempor sodales mi. Pellentesque ut tortor commodo, volutpat turpis non, sodales orci. <a href="javascript:void(0);">This is a link</a></p>
+            </div>
+
+            <!-- Buttons -->
+            <div class="module">
+                <h1 class="title">Buttons</h1>
+
+                <div class="container">
+                    <span class="name">Button no icons, default color</span>
+                    <a class="btn" href="javascript:void(0);">Button</a>
+                </div>
+
+                <div class="container">
+                    <span class="name">Button only icon</span>
+                    <a class="btn c-icon" href="javascript:void(0);"><span class="icon-down-arrow"></span></a>
+                </div>
+                <div class="container">
+                    <span class="name">Button icon left side, default color</span>
+                    <a class="btn l-icon" href="javascript:void(0);"><span class="icon-down-arrow"></span>Button</a>
+                </div>
+
+                <div class="container">
+                    <span class="name">Button icon right side, default color</span>
+                    <a class="btn r-icon" href="javascript:void(0);">Button<span class="icon-down-arrow"></span></a>
+                </div>
+
+                <div class="container">
+                    <span class="name">Button icon both side, default color</span>
+                    <a class="btn two-icon" href="javascript:void(0);"><span class="icon-left"></span>Button<span class="icon-right"></span></a>
+                </div>
+
+                <div class="container">
+                    <span class="name">Button with dropdown icon and functionality on right side</span>
+                    <a class="btn dd-icon" href="javascript:void(0);">Button<span class="icon-down"></span></a>
+                </div>
+
+                <div class="container">
+                    <span class="name">Button Colors</span>
+                    <h6>Add the following classes to the buttons to add different colors</h6>
+                </div>
+
+                <div class="container">
+                    <span class="name">Gray Button</span>
+                    <a class="btn" href="javascript:void(0);">Gray Button</a>
+                </div>
+                <div class="container">
+                    <span class="name">Colored Button</span>
+                    <a class="btn colored" href="javascript:void(0);"></span>Colored Button</a>
+                </div>
+
+                <div class="container">
+                    <span class="name">Colored Button :disabled</span>
+                    <a class="btn colored disabled"href="javascript:void(0);">Colored Button</a>
+                </div>
+
+                <div class="container">
+                    <span class="name">Large Button</span>
+                    <a class="btn large" href="javascript:void(0);"><i class="icon-download"></i>Gray Button</a>
+                </div>
+
+                <div class="container">
+                    <span class="name">Sign In Button</span>
+                    <button class="btn login">Sign In</button>
+                </div>
+            </div>
+
+            <!-- Types of Text Inputs -->
+            <div class="module">
+                <h1 class="title">Text Inputs</h1>
+                <h6>Inputs will take 100% of their parent container</h6>
+
+                <div class="container">
+                    <span class="name">Input text field</span>
+                    <input type="text" placeholder="Text...">
+                </div>
+
+                <div class="container">
+                    <span class="name">Input text field, search icon</span>
+                    <div class="search-container">
+                        <input class="icon-input" type="text" placeholder="Search...">
+                        <span class="icon-search"></span>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <span class="name">Input email text field</span>
+                    <input type="email" placeholder="Email...">
+                </div>
+
+                <div class="container">
+                    <span class="name">Input password</span>
+                    <input type="password" placeholder="Password">
+                </div>
+
+                <div class="container">
+                    <span class="name">Input :disabled</span>
+                    <input type="text" class="disabled" placeholder="Text..." disabled>
+                </div>
+            </div>
+
+            <!-- Icons -->
+            <div class="module">
+                <h1 class="title">Icons</h1>
+                <div class="span1 icons"><span class="icon-reports"></span></div>
+                <div class="span1 icons"><span class="icon-quote"></span></div>
+                <div class="span1 icons"><span class="icon-down-arrow"></span></div>
+                <div class="span1 icons"><span class="icon-doc-repo"></span></div>
+                <div class="span1 icons"><span class="icon-dashboard"></span></div>
+                <div class="span1 icons"><span class="icon-billing"></span></div>
+                <div class="span1 icons"><span class="icon-person"></span></div>
+                <div class="span1 icons"><span class="icon-arrow-up"></span></div>
+                <div class="span1 icons"><span class="icon-search"></span></div>
+                <div class="span1 icons"><span class="icon-down"></span></div>
+                <div class="span1 icons"><span class="icon-up"></span></div>
+                <div class="span1 icons"><span class="icon-calendar"></span></div>
+                <div class="span1 icons"><span class="icon-left"></span></div>
+                <div class="span1 icons"><span class="icon-right"></span></div>
+                <div class="span1 icons"><span class="icon-export"></span></div>
+                <div class="span1 icons"><span class="icon-print"></span></div>
+                <div class="span1 icons"><span class="icon-question"></span></div>
+                <div class="span1 icons"><span class="icon-settings"></span></div>
+                <div class="span1 icons"><span class="icon-arrow-right"></span></div>
+                <div class="span1 icons"><span class="icon-tracking"></span></div>
+                <div class="span1 icons"><span class="icon-shipments"></span></div>
+                <div class="span1 icons"><span class="icon-close"></span></div>
+            </div>
+
+            <!-- Grid -->
+            <div class="module">
+                <h1 class="title">Grid Section</h1>
+                <h6>The whole wrapper on the page will push the content over for the side bar, and then everything will be percentage based with a fixed gutter around all items.  White is the gutter spacing.</h6>
+                <p><em>Gutter Examples</em></p>
+                <div class="span1"><div class="colored-background">25% width with gutter</div></div>
+                <div class="span1"><div class="colored-background">25% width with gutter</div></div>
+                <div class="span1"><div class="colored-background">25% width with gutter</div></div>
+                <div class="span1"><div class="colored-background">25% width with gutter</div></div>
+                <div class="span2"><div class="colored-background">50% width with gutter</div></div>
+                <div class="span2"><div class="colored-background">50% width with gutter</div></div>
+                <div class="span3"><div class="colored-background">75% width with gutter</div></div>
+                <div class="span4"><div class="colored-background">100% width with gutter</div></div>
+                <p style="clear: left;"><em>No Gutter Examples</em></p>
+                <div class="span1 ng colored-background">25% width with no gutter</div>
+                <div class="span1 ng colored-background">25% width with no gutter</div>
+                <div class="span1 ng colored-background">25% width with no gutter</div>
+                <div class="span1 ng colored-background">25% width with no gutter</div>
+                <div class="span2 ng colored-background">50% width with no gutter</div>
+                <div class="span2 ng colored-background">50% width with no gutter</div>
+                <div class="span3 ng colored-background">75% width with no gutter</div>
+                <div class="span4 ng colored-background">100% width with no gutter</div>
+            </div>
+
+            <!--  Form styles -->
+            <div class="module">
+                <h1 class="title">Form</h1>
+
+                <div class="container">
+                    <span class="name">Text Field</span>
+                    <input type="text" placeholder="text" />
+                </div>
+
+                <div class="container">
+                    <span class="name">Textarea</span>
+                    <textarea></textarea>
+                </div>
+
+                <div class="container">
+                    <span class="name">Select</span>
+                    <select class="select">
+                        <option>Choose an option</option>
+                        <option>Git</option>
+                        <option>Subversion</option>
+                        <option>Social Coding</option>
+                        <option>Beets</option>
+                        <option>Bears</option>
+                        <option>Battlestar Galactica</option>
+                    </select>
+                </div>
+
+                <div class="container">
+                    <span class="name">Checkbox</span>
+                    <input id="check-1" class="checkbox" type="checkbox">
+                    <label for="check-1">Checkbox</label>
+                    <input id="check-2" class="checkbox" type="checkbox" checked>
+                    <label for="check-2">Checked</label>
+                </div>
+
+                <div class="container">
+                    <span class="name">Radio</span>
+                    <input type="radio" name="sex" value="male">Male<br>
+                    <input type="radio" name="sex" value="female">Female
+                </div>
+            </div>
+
+            <!--  Table styles -->
+            <div class="module">
+                <h1 class="title">Table</h1>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>City</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Smith</td>
+                            <td>Developer</td>
+                            <td>Chicago</td>
+                        </tr>
+                        <tr>
+                            <td>John Smith</td>
+                            <td>Developer</td>
+                            <td>Chicago</td>
+                        </tr>
+                        <tr>
+                            <td>John Smith</td>
+                            <td>Developer</td>
+                            <td>Chicago</td>
+                        </tr>
+                        <tr>
+                            <td>John Smith</td>
+                            <td>Developer</td>
+                            <td>Chicago</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!--  Sidebar Navigation -->
+        <div id="sidebar-nav">
+            <ul>
+                <li><a href="javascript:void(0);" class="active">Text Styles</a></li>
+                <li><a href="javascript:void(0);">Buttons</a></li>
+                <li><a href="javascript:void(0);">Text Inputs</a></li>
+                <li><a href="javascript:void(0);">Icons</a></li>
+                <li><a href="javascript:void(0);">Grid Section</a></li>
+                <li><a href="javascript:void(0);">Form</a></li>
+                <li><a href="javascript:void(0);">Table</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        function setMargin() {
+            var lastModule = $('.module:last'),
+                moduleHeight = lastModule.height(),
+                winHeight = $(window).height(),
+                margin = winHeight - moduleHeight;
+            if (margin > 0) {
+                lastModule.css('marginBottom', margin);
+            } else {
+                lastModule.css('marginBottom', 20);
+            }
+        }
+
+        $(document).ready(function() {
+
+            // Function to scroll page to corresponding section
+            var sideNavLink = $('#sidebar-nav ul li a');
+            sideNavLink.on('click', function() {
+                var linkIndex = sideNavLink.index(this);
+                $('html, body').animate({ scrollTop: $('.module').eq(linkIndex).offset().top }, 500);
+            });
+
+            // Waypoint function to set active on current link on Side Nav
+            $('.module').waypoint(function (direction) {
+                var itemIndex = $(this).index() - 1,
+                    prevItem = itemIndex - 1;
+                if (itemIndex > 0) {
+                    if (direction === 'up') {
+                        sideNavLink.eq(itemIndex).removeClass('active');
+                        sideNavLink.eq(prevItem).addClass('active');
+                    }
+                    if (direction === 'down') {
+                        sideNavLink.eq(prevItem).removeClass('active');
+                        sideNavLink.eq(itemIndex).addClass('active');
+                    }
+                }
+            }, { offset:'10' });
+
+            // Adds margin to the bottom of the page for bigger dimensions screens
+            setMargin();
+
+            $(window).resize(function(){
+                setMargin();
+            });
+        });
+    </script>
+</body>
+</html>

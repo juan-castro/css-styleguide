@@ -1,0 +1,585 @@
+// CSS Structure
+// 1. Importing
+// 2. Color Variables
+// 3. Fonts
+// 4. Layout Styles
+// 5. Text Styles
+// 6. Form Styles
+// 7. Buttons
+// 8. Table
+
+
+//
+//
+// 1. Importing
+// 
+//
+
+@import "lib/normalize";
+@import "lib/grid";
+@import "lib/mixins";
+
+//
+//
+// 2. Color Variables
+// 
+//
+
+@text-color: #444;
+@white: #fff;
+@yellow: #FFE966;
+@blue: #3096C9;
+@lght-grey: #E6E7E8;
+@med-lght-grey: #939598;
+@med-grey: #A7A9AC;
+@drk-grey: #888A8C;
+@grayButton: #939598;
+@headerBackground: #535D66;
+@darkHeaderText: #f1f2f2;
+@mainColor:	#389CE0;
+@mainDrk5: darken(@mainColor, 5%);
+@mainDrk10: darken(@mainColor, 10%);
+
+//
+//
+// 3. Fonts
+// 
+//
+
+@font-face{
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-Regular-webfont.eot');
+	src: url('../fonts/OpenSans-Regular-webfont.eot?iefix') format('eot'),
+		 url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
+		 url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+		 url('../fonts/OpenSans-Regular-webfont.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-Italic-webfont.eot');
+	src: url('../fonts/OpenSans-Italic-webfont.eot?iefix') format('eot'),
+		 url('../fonts/OpenSans-Italic-webfont.woff') format('woff'),
+		 url('../fonts/OpenSans-Italic-webfont.ttf') format('truetype'),
+		 url('../fonts/OpenSans-Italic-webfont.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face{
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-Bold-webfont.eot');
+	src: url('../fonts/OpenSans-Bold-webfont.eot?iefix') format('eot'),
+		 url('../fonts/OpenSans-Bold-webfont.woff') format('woff'),
+		 url('../fonts/OpenSans-Bold-webfont.ttf') format('truetype'),
+		 url('../fonts/OpenSans-Bold-webfont.svg#webfont') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-Light-webfont.eot');
+	src: url('../fonts/OpenSans-Light-webfont.eot?iefix') format('eot'),
+		 url('../fonts/OpenSans-Light-webfont.woff') format('woff'),
+		 url('../fonts/OpenSans-Light-webfont.ttf') format('truetype'),
+		 url('../fonts/OpenSans-Light-webfont.svg#webfont') format('svg');
+	font-weight: lighter;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-Semibold-webfont.eot');
+	src: url('../fonts/OpenSans-Semibold-webfont.eot?iefix') format('eot'),
+		 url('../fonts/OpenSans-Semibold-webfont.woff') format('woff'),
+		 url('../fonts/OpenSans-Semibold-webfont.ttf') format('truetype'),
+		 url('../fonts/OpenSans-Semibold-webfont.svg#webfont') format('svg');
+	font-weight: 600;
+	font-style: normal;	
+}
+
+//
+//
+// 4. Layout Styles
+// 
+//
+
+body {
+	font-family: 'Open Sans', arial, sans-serif;
+	background: @lght-grey;
+	color: @text-color;
+}
+
+#wrapper {
+	margin: 0 0 0 10%;
+	background: @white;
+	padding: 40px;
+	.clearfix;
+
+	#content {
+		width: 70%;
+		.left;
+
+		.container {
+			border-top: 1px solid @lght-grey;
+		    padding: 15px 0;
+
+		    .name {
+			    background: #F9F9F9;
+			    color: #999999;
+			    display: block;
+			    font-size: 11px;
+			    padding: 5px 15px;
+			    position: absolute;
+			    right: 0;
+			    top: -1px;
+			    border: 1px solid @lght-grey;
+		    }
+
+		    .search-container {
+		    	position: relative;
+		    	margin-top: 25px;
+
+		    	input {
+		    		margin: 0;
+		    	}
+		    }
+		}
+	}
+
+	#sidebar-nav {
+		width: 20%;
+		.right;
+		position: fixed;
+		top: 40px;
+		right: 40px;
+
+		ul {
+			background: #F7F5FA;
+		    .round(5px);
+		    padding: 15px 0;
+		    text-shadow: 0 1px 0 @white;
+		    list-style: none;
+
+		    li {
+		    	padding: 0 15px;
+
+		    	&:last-child a {
+		    		border: none;
+		    	}
+
+		    	a {
+				    display: block;
+				    padding: 8px 10px;
+				    text-decoration: none;
+				    border-bottom: 1px solid @lght-grey;
+				    .transition(.25s);
+				    color: @blue;
+
+				    &.active {
+				    	background: @lght-grey;
+				    	color: @text-color;
+				    }
+
+				    &:hover {
+				    	color: @text-color;
+				    }
+		    	}
+		    }
+		}
+	}
+
+	#intro {
+		padding-bottom: 20px;
+		border-bottom: 1px solid @lght-grey;
+
+		h1 {
+			font-size: 40px;
+			font-weight: 600;
+		}
+
+		p {
+			font-size: 22px;
+			line-height: 30px;
+		}
+	}
+
+	.module {
+		padding: 20px 0;
+		border-bottom: 1px solid @lght-grey;
+		.clearfix;
+
+		&:last-child {
+			border: none;
+		}
+
+
+		.span1, .span2, .span3, .span4{
+			border: 1px solid @med-grey;
+			margin: 10px 0;
+		}
+
+		.span1 {
+			&.icons {
+				padding: 20px 0;
+				border: 1px solid @lght-grey;
+
+				span {
+					display: block;
+					text-align: center;
+					font-size: 40px;
+					color: @med-grey;
+				}
+			}
+		}
+
+		.colored-background{
+			background-color: @lght-grey;
+			padding: 16px;
+		}
+	}
+}
+
+.title {
+	color: @blue;
+	font-weight: normal;
+}
+
+//
+//
+// 5. Text Styles
+// 
+//
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+}
+
+h1 {
+	font-size: 32px;
+	margin-bottom: 10px;
+}
+
+h2 {
+	font-size: 28px;
+	margin-bottom: 10px;
+}
+
+h3 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+h4 {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+h5 {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+h6 {
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+p {
+	font-weight: lighter;
+	font-size: 14px;
+	line-height: 24px;
+	margin-bottom: 15px;
+}
+
+a {
+	color: #29B297;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+//
+//
+// 6. Form Styles
+// 
+//
+
+*:focus { // Eliminates border on Chrome and Safari
+    outline: none;  
+}
+
+input[type="text"], input[type="email"], input[type="password"],
+textarea, select {
+	font-family: "Open Sans", arial, sans-serif;
+	border: 1px solid @lght-grey;
+	outline: none;
+	padding: 16px;
+	width: 100%;
+	font-weight: lighter;
+	font-size: 13px;
+	.box-sizing();
+	.round(5px);
+	resize: none;
+	margin-top: 25px;
+}
+
+label{
+	line-height: 26px;
+	vertical-align: bottom;
+	cursor: pointer;
+}
+
+// input with icon on the right
+input.icon-input {
+	padding-right: 33px;
+
+	~ span{
+		position: absolute;
+		right: 23px;
+		top: 18px;
+		color: @med-grey;
+
+		&.icon-close {
+			cursor: pointer;
+			font-size: 14px;
+			padding: 1px;
+			display: none;
+		}
+	}
+}
+
+.disabled {
+	background: @lght-grey;
+}
+
+// Checkbox
+input[type="checkbox"] {
+	display: none;
+
+	&+ label::before{
+		content: "";
+		display: inline-block;
+		width: 20px;
+		height: 22px;
+		background: url("../images/checkboxs.png") no-repeat 0px 2px;
+		margin: 0 10px 0 0;
+		vertical-align: top;
+	}
+
+	&:checked + label::before{
+		background-position: -21px 2px;
+	}
+
+	&.deselect + label::before{
+		background-position: -42px 2px;
+	}
+}
+
+//
+//
+// 7. Buttons
+// 
+//
+
+.btn {
+    -moz-user-select: none;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: normal;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    background: @grayButton;
+    border: 3px solid @drk-grey;
+	.round(3px);
+	color: @white;
+	text-decoration: none;
+	position: relative;
+	font-size: 13px;
+	.transition(.2s);
+
+	&:hover {
+		background: darken(@grayButton, 10%);
+    	border: 3px solid darken(@drk-grey, 10%);
+	}
+
+	&.login {
+		margin-top: 16px;
+		font-size: 16px;
+		width: 100%;
+		background: @yellow;
+		border: none;
+		height: 48px;
+		text-transform: uppercase;
+		color: @headerBackground;
+		-webkit-box-shadow: 0 8px 0px -3px rgba(0,0,0,.1);
+		-moz-box-shadow: 0 8px 0px -3px rgba(0,0,0,.1);
+		box-shadow: 0 8px 0px -3px rgba(0,0,0,.1);
+		.transition(.25s);
+
+		&:hover {
+			background: darken(@yellow, 5%);
+			color: darken(@headerBackground, 10%);
+			border: none
+		}
+	}
+
+	&.colored {
+		background: @mainColor;
+		border: 3px solid @mainDrk5;
+		position: relative;
+		color: @white;
+		.transition(.2s);
+
+		&:hover {
+			background: @mainDrk5;
+			border: 3px solid @mainDrk10;
+		}
+
+		&.disabled {
+			color: rgba(255,255,255,.5);
+			cursor: default;
+
+			&:hover {
+				background: @mainColor;
+				border: 3px solid @mainDrk5;
+			}
+
+			.icon-down-arrow {
+			    color: rgba(255,255,255,.5);
+			    .transition(.2s);
+			}
+		}
+
+		.icon-down-arrow{
+			color: @white;
+		}
+	}
+
+	&.large {
+		padding: 10px 45px;
+		font-size: 16px;
+		font-weight: 600;
+		position: relative;
+		transition: (.25s);
+
+		&:hover {
+			background: darken(@grayButton, 10%);
+			border: 3px solid darken(@drk-grey, 10%);
+		}
+	}
+
+	.icon-down-arrow {
+	    display: inline-block;
+	    width: 12px;
+	    height: 13px;
+	    color: @white;
+	    .transition(.2s);
+	    position: absolute;
+	    top: 8px;
+	}
+
+	&.c-icon {
+
+		.icon-down-arrow {
+			position: relative;
+			top: 1px;
+		}
+	}
+
+	&.l-icon {
+		padding: 6px 12px 6px 30px;
+
+		.icon-down-arrow {
+	    	left: 10px;
+		}
+	}
+
+	&.r-icon {
+		padding: 6px 30px 6px 12px;
+
+		.icon-down-arrow {
+	    	right: 10px;
+		}
+	}
+	&.dd-icon {
+		padding: 6px 30px 6px 12px;
+
+		.icon-down {
+			position: absolute;
+	    	right: 10px;
+	    	top: 12px;
+	    	font-size: 8px;
+		}
+	}
+
+	&.two-icon {
+		padding: 6px 30px;
+
+		.icon-left {
+			position: absolute;
+	    	left: 10px;
+	    	top: 8px;
+		}
+
+		.icon-right {
+			position: absolute;
+	    	right: 10px;
+	    	top: 8px;
+		}
+	}
+}
+
+//
+//
+// 8. Table
+// 
+//
+
+table {
+	width: 100%;
+	border: none;
+
+	thead {
+		border: none;
+
+		th {
+			background-color: @drk-grey;
+			border: none;
+			color: @darkHeaderText;
+			font-size: 14px;
+			font-weight: 600;
+			text-transform: uppercase;
+			padding: 10px 16px;
+			text-align: left;
+		}
+	}
+
+	tr {
+		border: none;
+
+		&:hover{
+			background-color: @darkHeaderText;
+		}
+	}
+
+	td {
+		font-weight: lighter;
+		font-size: 14px;
+		border: none;
+		border-bottom: 1px solid @med-lght-grey;
+		padding: 10px 16px;
+	}
+}
+
+
+
+
